@@ -1,19 +1,24 @@
 <template>
   <div class="nav-bg block w-full py-5 px-8">
-    <div class="grid grid-cols-3 mx-auto" style="max-width:1100px">
+    <div class="grid grid-cols-3 mx-auto items-center" style="max-width:1100px">
       <div class="nav-logo">
         <logo/>
       </div>
       <div class="nav-links">
-        <ul class="flex justify-between text-base font-medium items-center text-white">
+        <ul class="flex justify-between text-base font-medium items-start text-white">
           <li>
-            <NuxtLink to="/">Home</NuxtLink>
+            <NuxtLink to="/">
+              <span>
+                <p>Home</p>
+                <span class="active-dot mx-auto"></span>
+              </span>
+            </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/">Find Jobs</NuxtLink>
+            <NuxtLink to="/jobs">Find Jobs</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/">Contact Us</NuxtLink>
+            <NuxtLink to="/contact">Contact Us</NuxtLink>
           </li>
         </ul>
       </div>
@@ -31,5 +36,15 @@ export default {
 .nav-bg{
   background-color: #0B0D17;
 }
-
+.nuxt-link-active {
+  color: #00FFF3;
+}
+.nuxt-link-active .active-dot {
+  height: 7px;
+  width: 7px;
+  background-color: #00FFF3;
+  border-radius: 50%;
+  display: block;
+  margin-top: 4px;
+}
 </style>
