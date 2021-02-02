@@ -15,10 +15,20 @@
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/jobs">Find Jobs</NuxtLink>
+            <NuxtLink to="/jobs">
+              <span>
+                <p>Find Jobs</p>
+                <span class="active-dot mx-auto"></span>
+              </span>
+            </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/contact">Contact Us</NuxtLink>
+            <NuxtLink to="/contact">
+              <span>
+                <p>Contact Us</p>
+                <span class="active-dot mx-auto"></span>
+              </span>
+            </NuxtLink>
           </li>
         </ul>
       </div>
