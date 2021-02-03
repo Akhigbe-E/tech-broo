@@ -83,10 +83,10 @@ export default {
 </script>
 
 <style scoped>
-.nuxt-link-active {
+.nuxt-link-exact-active {
   color: #00fff3;
 }
-.nuxt-link-active .active-dot {
+.nuxt-link-exact-active .active-dot {
   height: 7px;
   width: 7px;
   background-color: #00fff3;
