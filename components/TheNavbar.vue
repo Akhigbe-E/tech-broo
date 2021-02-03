@@ -1,11 +1,16 @@
 <template>
   <div class="nav-bg block w-full py-5 px-8">
-    <div class="grid grid-cols-3 mx-auto items-center" style="max-width:1100px">
+    <div
+      class="grid grid-cols-3 mx-auto items-center"
+      style="max-width: 1100px"
+    >
       <div class="nav-logo">
-        <logo/>
+        <logo />
       </div>
       <div class="nav-links">
-        <ul class="flex justify-between text-base font-medium items-start text-white">
+        <ul
+          class="flex justify-between text-base font-medium items-start text-white"
+        >
           <li>
             <NuxtLink to="/">
               <span>
@@ -37,22 +42,20 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style>
-.nav-bg{
-  background-color: #0B0D17;
+.nav-bg {
+  background-color: #0b0d17;
 }
 .nuxt-link-active {
-  color: #00FFF3;
+  color: #00fff3;
 }
 .nuxt-link-active .active-dot {
   height: 7px;
   width: 7px;
-  background-color: #00FFF3;
+  background-color: #00fff3;
   border-radius: 50%;
   display: block;
   margin-top: 4px;
