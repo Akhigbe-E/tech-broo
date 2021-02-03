@@ -40,12 +40,12 @@
       <div class="text-right inline-block sm:hidden">
         <button
           v-if="isNavClosed"
-          @click="toggleNav"
           class="inline-block outline-none"
+          @click="toggleNav"
         >
           <img src="~/assets/images/nav_burger.svg" alt="nav" />
         </button>
-        <button v-else @click="toggleNav" class="inline-block outline-none">
+        <button v-else class="inline-block outline-none" @click="toggleNav">
           <img src="~/assets/images/nav_burger_close.svg" alt="nav" />
         </button>
       </div>
@@ -62,15 +62,9 @@ export default {
     isNavClosed: true,
     windowWidth: window.innerWidth,
   }),
-  methods: {
-    toggleNav() {
-      this.isNavClosed = !this.isNavClosed
-    },
-  },
   watch: {
     windowWidth() {
       if (this.windowWidth > 640) {
-        console
         this.isNavClosed = true
       }
     },
@@ -79,6 +73,11 @@ export default {
     window.addEventListener('resize', () => {
       this.windowWidth = window.innerWidth
     })
+  },
+  methods: {
+    toggleNav() {
+      this.isNavClosed = !this.isNavClosed
+    },
   },
 }
 </script>
