@@ -1,15 +1,17 @@
 <template>
   <div class="tech-broo-header mb-28">
     <div class="tech-broo-header-content">
-      <div class="w-full text-center">
-        <p class="text-xl mb-1" style="color: #00fff3">BECOME A TECH BRO</p>
-        <h1 class="text-white font-semibold mb-8 text-4xl">
+      <div class="w-full text-center px-5">
+        <p class="mb-1 text-lg sm:text-xl" style="color: #00fff3">
+          BECOME A TECH BRO
+        </p>
+        <h1 class="text-white font-semibold mb-8 text-3xl sm:text-4xl">
           Land your dream tech Job with ease.
         </h1>
         <div class="max-w-3xl mx-auto">
           <search-field />
           <span>
-            <p class="text-lg text-white text-left mt-4">
+            <p class="text-base text-white text-left mt-4 sm:text-lg">
               Popular: Fullstack Developer, Product Designer, UX Designer
             </p>
           </span>
