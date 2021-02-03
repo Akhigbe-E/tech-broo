@@ -1,13 +1,13 @@
 <template>
-  <div class="nav-bg block w-full py-5 px-8">
+  <div class="block w-full p-5 relative" style="background-color: #0b0d17">
     <div
-      class="grid grid-cols-3 mx-auto items-center"
+      class="grid grid-cols-2 sm:grid-cols-3 mx-auto items-center"
       style="max-width: 1100px"
     >
       <div class="nav-logo">
         <logo />
       </div>
-      <div class="nav-links">
+      <div class="nav-links hidden sm:inline-block">
         <ul
           class="flex justify-between text-base font-medium items-start text-white"
         >
@@ -37,18 +37,53 @@
           </li>
         </ul>
       </div>
+      <div class="text-right inline-block sm:hidden">
+        <button
+          v-if="isNavClosed"
+          @click="toggleNav"
+          class="inline-block outline-none"
+        >
+          <img src="~/assets/images/nav_burger.svg" alt="nav" />
+        </button>
+        <button v-else @click="toggleNav" class="inline-block outline-none">
+          <img src="~/assets/images/nav_burger_close.svg" alt="nav" />
+        </button>
+      </div>
+    </div>
+    <div v-if="!isNavClosed">
+      <mobile-nav />
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data: () => ({
+    isNavClosed: true,
+    windowWidth: window.innerWidth,
+  }),
+  methods: {
+    toggleNav() {
+      this.isNavClosed = !this.isNavClosed
+    },
+  },
+  watch: {
+    windowWidth() {
+      if (this.windowWidth > 640) {
+        console
+        this.isNavClosed = true
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener('resize', () => {
+      this.windowWidth = window.innerWidth
+    })
+  },
+}
 </script>
 
-<style>
-.nav-bg {
-  background-color: #0b0d17;
-}
+<style scoped>
 .nuxt-link-active {
   color: #00fff3;
 }
