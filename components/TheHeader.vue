@@ -1,5 +1,5 @@
 <template>
-  <div class="tech-broo-header mb-28">
+  <div class="tech-broo-header mb-10 sm:mb-28">
     <div class="tech-broo-header-content">
       <div class="w-full text-center px-5">
         <p class="mb-1 text-lg sm:text-xl" style="color: #00fff3">
