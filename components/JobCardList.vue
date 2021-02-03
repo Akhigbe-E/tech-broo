@@ -1,5 +1,8 @@
 <template>
-  <div class="grid gap-x-12 gap-y-20 grid-cols-1 sm:grid-cols-3">
+  <div
+    class="grid gap-x-12 gap-y-20 grid-cols-1 sm:grid-cols-3 container mx-auto px-5"
+    style="max-width: 1100px"
+  >
     <job-card-list-item
       v-for="job in jobs"
       :key="job.id"
