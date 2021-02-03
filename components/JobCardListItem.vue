@@ -23,7 +23,7 @@
       <div class="flex items-center justify-between">
         <div class="flex items-center">
           <img src="~/assets/images/location_icon.svg" alt="location" />
-          <p class="ml-2">{{ location }}</p>
+          <p class="ml-2">{{ location | truncateLocation }}</p>
         </div>
         <div>
           <div class="flex items-center cursor-pointer">
@@ -63,6 +63,9 @@ export default {
   filters: {
     truncateTitle(name) {
       return `${name.slice(0, 50)}${name.length > 50 ? '...' : ''}`
+    },
+    truncateLocation(location) {
+      return `${location.slice(0, 20)}${location.length > 20 ? '...' : ''}`
     },
   },
 }
