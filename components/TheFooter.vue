@@ -1,11 +1,14 @@
 <template>
-  <div class="py-5" style="background-color: #0b0d17">
+  <div class="p-5" style="background-color: #0b0d17">
     <div
       class="flex items-center justify-between container mx-auto"
       style="max-width: 1100px"
     >
       <logo />
-      <p class="text-sm font-normal text-center" style="color: #d9dbe1">
+      <p
+        class="text-sm font-normal text-center hidden sm:inline-block"
+        style="color: #d9dbe1"
+      >
         © 2021 Techbroo. All rights reserved
       </p>
       <div class="flex gap-x-2 text-right sm:gap-x-4">
@@ -20,6 +23,12 @@
         </a>
       </div>
     </div>
+    <p
+      class="text-sm font-normal text-left inline-block mt-8 sm:hidden"
+      style="color: #d9dbe1"
+    >
+      © 2021 Techbroo. All rights reserved
+    </p>
   </div>
 </template>
 
