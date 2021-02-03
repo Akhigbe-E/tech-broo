@@ -62,7 +62,7 @@ export default {
   },
   filters: {
     truncateTitle(name) {
-      return `${name.slice(0, 60)}${name.length > 60 ? '...' : ''}`
+      return `${name.slice(0, 50)}${name.length > 50 ? '...' : ''}`
     },
   },
 }
