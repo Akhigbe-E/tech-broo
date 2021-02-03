@@ -6,8 +6,17 @@
       </span>
       <input v-model="query" type="text" class="text-lg w-full font-normal" />
       <span>
-        <button @click="() => {}" class="search-button text-white rounded-lg">
+        <button
+          @click="() => {}"
+          class="search-button text-white rounded-lg hidden sm:inline-block"
+        >
           Search Now
+        </button>
+        <button
+          @click="() => {}"
+          class="search-button text-white rounded-lg inline-block sm:hidden"
+        >
+          Search
         </button>
       </span>
     </div>
