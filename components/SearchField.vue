@@ -4,16 +4,22 @@
       <span class="">
         <img src="~/assets/images/search_icon.svg" alt="search" />
       </span>
-      <input type="text" class="text-lg w-full font-normal" />
+      <input v-model="query" type="text" class="text-lg w-full font-normal" />
       <span>
-        <button class="search-button text-white rounded-lg">Search Now</button>
+        <button @click="() => {}" class="search-button text-white rounded-lg">
+          Search Now
+        </button>
       </span>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data: () => ({
+    query: '',
+  }),
+}
 </script>
 
 <style scoped>
