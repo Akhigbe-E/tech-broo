@@ -1,6 +1,32 @@
 <template>
-  <div class="container">
-    <h1 class="text-3xl">Hello</h1>
+  <div class="">
+    <the-header />
+    <div class="text-center mb-11 sm:mb-16">
+      <p class="text-lg font-medium sm:text-xl mb-3" style="color: #1f9e98">
+        Over 500+ Jobs
+      </p>
+      <h2
+        class="text-2xl font-semibold sm:text-3xl mb-3"
+        style="color: #18191f"
+      >
+        Featured Jobs
+      </h2>
+    </div>
+    <div class="w-full mb-20">
+      <job-card-list />
+    </div>
+    <div class="mb-28 text-center">
+      <nuxt-link
+        style="border: 1.5px solid #1f9e98; color: #1f9e98"
+        class="rounded-lg px-9 py-6 inline-block"
+        to="/jobs"
+      >
+        <div class="flex">
+          <p class="mr-2 font-medium">Explore more jobs</p>
+          <img src="~/assets/images/right_icon.svg" alt="proceed" />
+        </div>
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
@@ -8,36 +34,4 @@
 export default {}
 </script>
 
-<style scoped>
-.container {
-  font-family: 'Inter';
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
+<style scoped></style>
