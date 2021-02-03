@@ -62,10 +62,10 @@ export default {
   },
   filters: {
     truncateTitle(name) {
-      return `${name.slice(0, 50)}${name.length > 50 ? '...' : ''}`
+      return `${name.slice(0, 40)}${name.length > 40 ? '...' : ''}`
     },
     truncateLocation(location) {
-      return `${location.slice(0, 20)}${location.length > 20 ? '...' : ''}`
+      return `${location.slice(0, 15)}${location.length > 15 ? '...' : ''}`
     },
   },
 }
