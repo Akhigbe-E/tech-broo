@@ -17,36 +17,12 @@
 
 <script>
 export default {
-  data: () => ({
-    jobs: [],
-  }),
-  async fetch() {
-    this.jobs = await fetch(
-      'https://github-jobs.glitch.me/positions.json?page=1'
-    )
-      .then((res) => res.json())
-      .then((data) => data.slice(0, 9).map((job) => new Jobs(job)))
+  props: {
+    jobs: {
+      type: Array,
+      required: true,
+    },
   },
-}
-class Jobs {
-  constructor({
-    id,
-    type,
-    created_at,
-    company,
-    company_url,
-    company_logo,
-    location,
-    title,
-  }) {
-    this.id = id
-    ;(this.jobType = type), (this.companyName = company)
-    this.location = location
-    this.title = title
-    this.createdAt = created_at
-    this.companyUrl = company_url
-    this.companyLogo = company_logo
-  }
 }
 </script>
 
