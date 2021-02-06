@@ -3,7 +3,11 @@
     <div class="tech-broo-job-card">
       <div class="flex mb-4">
         <div class="flex items-center">
-          <img :src="`${logo}`" alt="logo" class="w-10 h-10 rounded-full" />
+          <img
+            :src="`${logo}`"
+            alt="logo"
+            class="w-10 h-10 rounded-full object-contain border border-green-100"
+          />
           <p class="ml-2 text-base font-medium">{{ name }}</p>
         </div>
       </div>
@@ -26,10 +30,13 @@
           <p class="ml-2">{{ location | truncateLocation }}</p>
         </div>
         <div>
-          <div class="flex items-center cursor-pointer">
+          <nuxt-link
+            :to="`/job/${id}`"
+            class="flex items-center cursor-pointer"
+          >
             <p class="mr-2 tech-broo-link font-medium">View Job</p>
             <img src="~/assets/images/right_icon.svg" alt="proceed" />
-          </div>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -39,6 +46,10 @@
 <script>
 export default {
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     name: {
       type: String,
       required: true,
