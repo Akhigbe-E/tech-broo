@@ -8,7 +8,12 @@
           alt="search"
         />
       </span>
-      <input v-model="query" type="text" class="text-lg w-full font-normal" />
+      <input
+        v-model="query"
+        placeholder="Job Title, Position, Location"
+        type="text"
+        class="text-lg w-full font-normal"
+      />
       <span>
         <nuxt-link
           :to="{ path: 'jobs', query: { search: query } }"
