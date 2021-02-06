@@ -68,7 +68,7 @@ export default {
   border: 1.5px solid #e5e5e5;
   border-radius: 8px;
   color: #9a9a9a;
-  padding: 12px 20px;
+  padding: 12px 12px;
   font-size: 1rem;
 }
 .tech-broo-dropdown-options {

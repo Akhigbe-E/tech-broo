@@ -6,6 +6,7 @@
     <job-card-list-item
       v-for="job in jobs"
       :key="job.id"
+      :id="job.id"
       :name="job.companyName"
       :title="job.title"
       :jobType="job.jobType"
