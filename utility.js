@@ -4,7 +4,8 @@ export class Jobs {
         type,
         created_at,
         company,
-        company_url,
+        url,
+        description,
         company_logo,
         location,
         title,
@@ -14,7 +15,8 @@ export class Jobs {
         this.location = location
         this.title = title
         this.createdAt = created_at
-        this.companyUrl = company_url
+        this.companyUrl = url
         this.companyLogo = company_logo
+        this.description = description
     }
 }
