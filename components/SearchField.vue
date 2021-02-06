@@ -10,18 +10,18 @@
       </span>
       <input v-model="query" type="text" class="text-lg w-full font-normal" />
       <span>
-        <button
-          @click="() => {}"
+        <nuxt-link
+          :to="{ path: 'jobs', query: { search: query } }"
           class="search-button text-white rounded-lg hidden sm:inline-block"
         >
           Search Now
-        </button>
-        <button
-          @click="() => {}"
+        </nuxt-link>
+        <nuxt-link
+          :to="{ path: 'jobs', query: { search: query } }"
           class="search-button text-white rounded-lg inline-block sm:hidden"
         >
           Go
-        </button>
+        </nuxt-link>
       </span>
     </div>
   </div>
