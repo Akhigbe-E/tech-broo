@@ -30,13 +30,13 @@
           <p class="ml-2">{{ location | truncateLocation }}</p>
         </div>
         <div>
-          <nuxt-link
-            :to="`/job/${id}`"
+          <a
+            :href="`https://jobs.github.com/positions/${id}`"
             class="flex items-center cursor-pointer"
           >
             <p class="mr-2 tech-broo-link font-medium">View Job</p>
             <img src="~/assets/images/right_icon.svg" alt="proceed" />
-          </nuxt-link>
+          </a>
         </div>
       </div>
     </div>
