@@ -5,7 +5,9 @@
       style="max-width: 1100px"
     >
       <div class="nav-logo">
-        <logo />
+        <NuxtLink to="/">
+          <logo />
+        </NuxtLink>
       </div>
       <div class="nav-links hidden sm:inline-block">
         <ul
@@ -28,7 +30,7 @@
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/contact">
+            <NuxtLink to="#">
               <span>
                 <p>Contact Us</p>
                 <span class="active-dot mx-auto"></span>

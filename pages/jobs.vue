@@ -20,12 +20,8 @@
         />
       </div>
     </div>
-    <div v-if="!jobs.length && $fetchState.pending" class="my-8 text-center">
-      <logo class="mx-auto pr-12" />
-      <p class="status-text">Loading...</p>
-    </div>
     <div
-      v-else-if="!jobs.length && !$fetchState.pending"
+      v-if="!jobs.length && !$fetchState.pending && searchString"
       class="my-8 text-center"
     >
       <img
@@ -47,6 +43,10 @@
         </button>
       </div>
     </div>
+    <div v-else-if="!jobs.length" class="my-8 text-center">
+      <logo class="mx-auto pr-12" />
+      <p class="status-text">Loading...</p>
+    </div>
     <div v-else-if="$fetchState.error" class="status-text">
       <p>Kindly refresh this page</p>
     </div>
@@ -56,14 +56,14 @@
         <div class="inline-block">
           <button
             @click="handlePrevious"
-            style="background-color: #1f9e98"
+            style="color: #1f9e98; border: 1px solid #1f9e98"
             class="px-12 py-4 text-white rounded-lg outline-none text-base font-medium"
           >
             Previous
           </button>
           <button
             @click="handleNext"
-            style="background-color: #1f9e98"
+            style="color: #1f9e98; border: 1px solid #1f9e98"
             class="px-12 py-4 text-white rounded-lg outline-none text-base font-medium"
           >
             Next

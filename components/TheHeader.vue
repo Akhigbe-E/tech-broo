@@ -12,7 +12,33 @@
           <search-field />
           <span>
             <p class="text-base text-white text-left mt-4 sm:text-lg">
-              Popular: Fullstack Developer, Product Designer, UX Designer
+              Popular:
+              <span
+                ><nuxt-link
+                  :to="{
+                    path: 'jobs',
+                    query: { search: 'Fullstack Developer' },
+                  }"
+                  class="underline"
+                  >Fullstack Developer</nuxt-link
+                >,
+                <nuxt-link
+                  :to="{
+                    path: 'jobs',
+                    query: { search: 'Product Designer' },
+                  }"
+                  class="underline"
+                  >Product Designer</nuxt-link
+                >,
+                <nuxt-link
+                  :to="{
+                    path: 'jobs',
+                    query: { search: 'UX Designer' },
+                  }"
+                  class="underline"
+                  >UX Designer</nuxt-link
+                >
+              </span>
             </p>
           </span>
         </div>
