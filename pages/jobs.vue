@@ -43,7 +43,10 @@
         </button>
       </div>
     </div>
-    <div v-else-if="!jobs.length" class="my-8 text-center">
+    <div
+      v-else-if="!jobs.length && !$fetchState.pending"
+      class="my-8 text-center"
+    >
       <logo class="mx-auto pr-12" />
       <p class="status-text">Loading...</p>
     </div>
